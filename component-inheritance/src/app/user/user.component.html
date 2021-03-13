@@ -1,2 +1,9 @@
 <p>user works!</p>
 <!-- {{name |lowercase}} : {{surname | lowercase}} -->
+
+<form name="testForm" [formGroup]="testForm">
+    <input name="foo" formControlName="foo" />
+    <h3 *ngIf="testForm.controls.foo.errors.valid">not ok</h3>
+
+    <pre> {{testForm.errors | json}}</pre>
+</form>
